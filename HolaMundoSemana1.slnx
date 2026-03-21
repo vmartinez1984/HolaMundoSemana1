@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="HolaMundo/HolaMundo.csproj" />
+  <Project Path="Pizzas.Api/Pizzas.Api.csproj" Id="698f24cc-5493-47f3-bb58-e9b6bd5e7a18" />
+  <Project Path="Productos.Api/Productos.Api.csproj" Id="3811fa64-f6fc-4fa9-a987-1d50fd18c8d7" />
+  <Project Path="Saludos/Saludos.csproj" />
+</Solution>
