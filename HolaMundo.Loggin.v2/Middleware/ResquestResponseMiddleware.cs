@@ -51,19 +51,19 @@ namespace HolaMundo.Loggin.v2.Middleware
             // Read the body from the stream
             var responseBodyText = await new StreamReader(memoryStream).ReadToEndAsync();
             //set data response
-            AnalizeResponse(context, requestDtoIn, responseBodyText);
-            _ = _requestRepository.AgregarAsync(requestDtoIn);
-            // Reset the position to 0 after reading
-            memoryStream.Seek(0, SeekOrigin.Begin);
+            //AnalizeResponse(context, requestDtoIn, responseBodyText);
+            //_ = _requestRepository.AgregarAsync(requestDtoIn);
+            //// Reset the position to 0 after reading
+            //memoryStream.Seek(0, SeekOrigin.Begin);
 
             
-            context.Response.Body = originalBodyStream;
-            await context.Response.Body.WriteAsync(memoryStream.ToArray());
+            //context.Response.Body = originalBodyStream;
+            //await context.Response.Body.WriteAsync(memoryStream.ToArray());
 
 
-            _logger.LogInformation($"StatusCode: {statusCode}");
-            _logger.LogInformation($"Response headers: {headersResponse}");
-            _logger.LogInformation($"Response body: {responseText}");
+            //_logger.LogInformation($"StatusCode: {statusCode}");
+            //_logger.LogInformation($"Response headers: {headersResponse}");
+            //_logger.LogInformation($"Response body: {responseText}");
         }
     }
 }
