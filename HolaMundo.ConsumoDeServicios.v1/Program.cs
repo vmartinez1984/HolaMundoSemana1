@@ -1,16 +1,9 @@
-using HolaMundo.Loggin.v2.Middleware;
-using Serilog;
-using Serilog.Debugging;
+using HolaMundo.ConsumoDeServicios.v1.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-SelfLog.Enable(msg => Console.WriteLine(msg));
-//Activamos serilog
-builder.Services.AddSerilog(options =>
-{
-    options.ReadFrom.Configuration(builder.Configuration);
-});
+builder.Services.AddScoped<CodigoPostalService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -18,7 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-app.UseMiddleware<ResquestResponseMiddleware>();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

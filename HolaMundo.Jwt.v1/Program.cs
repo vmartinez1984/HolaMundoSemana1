@@ -1,24 +1,21 @@
-using HolaMundo.Loggin.v2.Middleware;
-using Serilog;
-using Serilog.Debugging;
+using Jwt.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-SelfLog.Enable(msg => Console.WriteLine(msg));
-//Activamos serilog
-builder.Services.AddSerilog(options =>
-{
-    options.ReadFrom.Configuration(builder.Configuration);
-});
-
+builder.Services.AgregarConfiguracionJwt(builder.Configuration["LlaveSecreta"]);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("Usuario", policy => { policy.RequireRole("Usuario"); });
+});
+
 var app = builder.Build();
-app.UseMiddleware<ResquestResponseMiddleware>();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -28,6 +25,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

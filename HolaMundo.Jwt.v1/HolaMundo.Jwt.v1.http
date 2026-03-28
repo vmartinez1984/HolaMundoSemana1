@@ -1,0 +1,6 @@
+@HolaMundo.Jwt.v1_HostAddress = http://localhost:5108
+
+GET {{HolaMundo.Jwt.v1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

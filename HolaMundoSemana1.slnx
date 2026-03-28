@@ -1,10 +1,13 @@
 <Solution>
+  <Project Path="HolaMundo.ConsumoDeServicios.v1/HolaMundo.ConsumoDeServicios.v1.csproj" Id="331a5888-cdd8-4125-aa8d-fcfbe4f2d11a" />
   <Project Path="HolaMundo.ExcepcionMiddleware.v1/HolaMundo.ExcepcionMiddleware.v1.csproj" Id="6da02c22-bcd5-46be-8a28-8446d01c1aa3" />
   <Project Path="HolaMundo.Filtro.v1/HolaMundo.Filtro.v1.csproj" Id="75a04399-f50a-4ce1-95ac-470703f2fedb" />
+  <Project Path="HolaMundo.Jwt.v1/HolaMundo.Jwt.v1.csproj" Id="af17337b-46bd-4a16-9a4f-2ed2f5f767ef" />
   <Project Path="HolaMundo.Loggin.v1/HolaMundo.Loggin.v1.csproj" Id="413f3668-4581-4a8c-9db9-d229c20cb1bb" />
   <Project Path="HolaMundo.Loggin.v2/HolaMundo.Loggin.v2.csproj" Id="d9c72606-a4c5-4a6e-b467-11fdbd0e35b6" />
   <Project Path="HolaMundo.Middleware.v1/HolaMundo.Middleware.v1.csproj" Id="3fefa03d-c176-4cd8-ac48-838b94329b56" />
   <Project Path="HolaMundo/HolaMundo.csproj" />
+  <Project Path="Jwt.Services/Jwt.Services.csproj" Id="0b5a3291-e317-49e5-a27a-dc12154e8b30" />
   <Project Path="Pizzas.Api/Pizzas.Api.csproj" Id="698f24cc-5493-47f3-bb58-e9b6bd5e7a18" />
   <Project Path="Productos.Api/Productos.Api.csproj" Id="3811fa64-f6fc-4fa9-a987-1d50fd18c8d7" />
   <Project Path="PuntoDeVenta.Api.v2/PuntoDeVenta.Api.v2.csproj" Id="b3f66637-e4f1-446c-be6c-c8f60c99e30e" />
