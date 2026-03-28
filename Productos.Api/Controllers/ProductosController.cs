@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Productos.Api.BusinessLayer;
 using Productos.Api.Dtos;
 using Productos.Api.Interfaces;
 
@@ -46,7 +45,7 @@ namespace Productos.Api.Controllers
         {
             ProductoDto productoDto = await _productoBl.GetProductoById(id);
             if (productoDto is null)
-                return NotFound(new IdDto { Mensaje = "No se encontro el producto"});            
+                return NotFound(new IdDto { Mensaje = "No se encontro el producto"});             
 
             return Ok(productoDto);
         }

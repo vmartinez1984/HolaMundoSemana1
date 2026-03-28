@@ -1,6 +1,16 @@
 <Solution>
+  <Project Path="HolaMundo.ExcepcionMiddleware.v1/HolaMundo.ExcepcionMiddleware.v1.csproj" Id="6da02c22-bcd5-46be-8a28-8446d01c1aa3" />
+  <Project Path="HolaMundo.Filtro.v1/HolaMundo.Filtro.v1.csproj" Id="75a04399-f50a-4ce1-95ac-470703f2fedb" />
+  <Project Path="HolaMundo.Loggin.v1/HolaMundo.Loggin.v1.csproj" Id="413f3668-4581-4a8c-9db9-d229c20cb1bb" />
+  <Project Path="HolaMundo.Loggin.v2/HolaMundo.Loggin.v2.csproj" Id="d9c72606-a4c5-4a6e-b467-11fdbd0e35b6" />
+  <Project Path="HolaMundo.Middleware.v1/HolaMundo.Middleware.v1.csproj" Id="3fefa03d-c176-4cd8-ac48-838b94329b56" />
   <Project Path="HolaMundo/HolaMundo.csproj" />
   <Project Path="Pizzas.Api/Pizzas.Api.csproj" Id="698f24cc-5493-47f3-bb58-e9b6bd5e7a18" />
   <Project Path="Productos.Api/Productos.Api.csproj" Id="3811fa64-f6fc-4fa9-a987-1d50fd18c8d7" />
+  <Project Path="PuntoDeVenta.Api.v2/PuntoDeVenta.Api.v2.csproj" Id="b3f66637-e4f1-446c-be6c-c8f60c99e30e" />
+  <Project Path="PuntoDeVenta.BusinessLayer/PuntoDeVenta.BusinessLayer.csproj" Id="d8795a02-94be-4d79-a02e-1c7dd4df90d1" />
+  <Project Path="PuntoDeVenta.Core/PuntoDeVenta.Core.csproj" Id="b9c97603-6ea9-4111-8122-b3eda3271e0a" />
+  <Project Path="PuntoDeVenta.Repositories.Core/PuntoDeVenta.Repositories.Core.csproj" Id="009b1a43-0510-4ed7-8a63-5d65ecceb30d" />
+  <Project Path="PuntoDeVenta.Repositories.Sql/PuntoDeVenta.Repositories.Sql.csproj" Id="e848eb8b-29d0-42d3-a1fc-43a0f688929f" />
   <Project Path="Saludos/Saludos.csproj" />
 </Solution>

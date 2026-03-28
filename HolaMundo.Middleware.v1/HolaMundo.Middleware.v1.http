@@ -1,0 +1,6 @@
+@HolaMundo.Middleware.v1_HostAddress = http://localhost:5048
+
+GET {{HolaMundo.Middleware.v1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
