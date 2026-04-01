@@ -29,5 +29,12 @@ namespace HolaMundo.Loggin.v2.Controllers
             })
             .ToArray();
         }
+
+        [HttpPost]
+        public IActionResult Post([FromBody] WeatherForecast weatherForecast)
+        {
+            //_logger.LogInformation("Received weather forecast: {@WeatherForecast}", weatherForecast);
+            return Ok(weatherForecast);
+        }
     }
 }
