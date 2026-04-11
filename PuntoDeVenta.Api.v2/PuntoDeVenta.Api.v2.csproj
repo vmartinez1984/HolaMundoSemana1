@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AlmacenDeArchivos.Local\AlmacenDeArchivos.Local.csproj" />
     <ProjectReference Include="..\PuntoDeVenta.BusinessLayer\PuntoDeVenta.BusinessLayer.csproj" />
     <ProjectReference Include="..\PuntoDeVenta.Core\PuntoDeVenta.Core.csproj" />
     <ProjectReference Include="..\PuntoDeVenta.Repositories.Sql\PuntoDeVenta.Repositories.Sql.csproj" />

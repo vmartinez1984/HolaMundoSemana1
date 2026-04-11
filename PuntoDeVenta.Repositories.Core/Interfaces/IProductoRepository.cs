@@ -7,5 +7,7 @@ namespace PuntoDeVenta.Repositories.Core.Interfaces
         Task<List<ProductoEntity>> GetProductosAsync();
 
         Task<int> AgregarAsync(ProductoEntity producto);
+
+        Task<ProductoEntity> GetByEncodeyKey(Guid encodedKey);
     }
 }

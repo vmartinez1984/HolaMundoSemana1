@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
 
 namespace PuntoDeVenta.Core.Dtos
 {
@@ -18,7 +19,6 @@ namespace PuntoDeVenta.Core.Dtos
         [Range(25, 350)]
         public decimal Precio { get; set; }
 
-        //[MaxLength(1000)]
-        //public string ImagenUrl { get; set; }
+        public IFormFile FormFile { get; set; }
     }
 }

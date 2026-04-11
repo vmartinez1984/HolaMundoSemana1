@@ -14,6 +14,7 @@ namespace Productos.Api.Controllers
         {
             this._productoBl = productoBl;
         }
+        string RutaBase = "C:\\Users\\ahal_\\source\\repos\\HolaMundoSemana1\\Productos.Api\\wwwroot\\";
 
         /// <summary>
         /// Obtener la lista de productos disponibles.
@@ -34,10 +35,28 @@ namespace Productos.Api.Controllers
 
         [HttpPost]
         public async Task<IActionResult> Post(ProductoDtoIn productoDtoIn)
-        {
+        {            
+            if (productoDtoIn.FormFile != null)
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    await productoDtoIn.FormFile.CopyToAsync(memoryStream);
+                    var contenido = memoryStream.ToArray();
+                    var ruta = RutaBase + productoDtoIn.Encodedkey +"."+ productoDtoIn.FormFile.ContentType.Split("/")[1];
+                    await System.IO.File.WriteAllBytesAsync(ruta, contenido);
+                }
+            }
             IdDto idDto = await _productoBl.CreateProducto(productoDtoIn);             
 
             return Created($"Productos/{idDto.Id}", idDto);
+        }
+
+        [HttpGet("Imagenes/{encodekey}")]
+        public async Task<IActionResult> ObtenerImagen(string encodekey)
+        {
+           var bytes = System.IO.File.ReadAllBytes(RutaBase + encodekey + ".png");
+
+           return File(bytes, "image/jpeg");
         }
 
         [HttpGet("{id}")]

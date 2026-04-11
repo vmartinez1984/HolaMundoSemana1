@@ -45,6 +45,11 @@ namespace Productos.Api.BusinessLayer
             return idDto;
         }
 
+        public async Task AgregarArchivo(ProductoDtoIn productoDtoIn)
+        {
+
+        } 
+
         public async Task<ProductoDto> GetProductoById(int id)
         {
             var entity = await _appDbContext.Producto.FindAsync(id);

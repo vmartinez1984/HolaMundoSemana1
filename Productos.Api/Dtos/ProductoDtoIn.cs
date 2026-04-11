@@ -18,7 +18,7 @@ namespace Productos.Api.Dtos
         [Range(25, 350)]
         public decimal Precio { get; set; }
 
-        //[MaxLength(1000)]
-        //public string ImagenUrl { get; set; }
+        
+        public IFormFile FormFile { get; set; }
     }
 }

@@ -28,6 +28,11 @@ namespace PuntoDeVenta.Repositories.Sql.Dao
 
         //    return productos;
         //}
+
+        public async Task<ProductoEntity> GetByEncodeyKey(Guid encodedKey)
+        {
+            return await _dbContext.Producto.FirstOrDefaultAsync(p => p.Encodedkey == encodedKey);
+        }
     }
         
 }

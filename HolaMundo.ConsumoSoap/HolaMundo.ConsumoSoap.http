@@ -1,0 +1,6 @@
+@HolaMundo.ConsumoSoap_HostAddress = http://localhost:5062
+
+GET {{HolaMundo.ConsumoSoap_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

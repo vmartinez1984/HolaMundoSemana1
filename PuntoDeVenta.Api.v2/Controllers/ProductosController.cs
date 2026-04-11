@@ -24,10 +24,23 @@ namespace PuntoDeVenta.Api.v2.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateProducto([FromBody] ProductoDtoIn productoDtoIn)
+        public async Task<IActionResult> CreateProducto(ProductoDtoIn productoDtoIn)
         {
+            ProductoDto productoDto = await productoBl.GetProductoByEncodedKey(productoDtoIn.Encodedkey);
+            if(productoDto is not null)
+            {
+                return StatusCode(StatusCodes.Status208AlreadyReported, new IdDto { Id = productoDto.Id });
+            }
             var idDto = await productoBl.CreateProducto(productoDtoIn);
             return Created(string.Empty, idDto);
+        }
+
+        [HttpGet("Imagenes/{encodedKey}")]
+        public async Task<IActionResult> GetImagen(Guid encodedKey)
+        {
+            var bytes = await productoBl.ObtenerImagenAsync(encodedKey);
+
+            return File(bytes, "image/png");
         }
     }
 }

@@ -19,6 +19,12 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AlmacenDeArchivos.Local\AlmacenDeArchivos.Local.csproj" />
+    <ProjectReference Include="..\PuntoDeVenta.Core\PuntoDeVenta.Core.csproj" />
   </ItemGroup>
 
 </Project>
